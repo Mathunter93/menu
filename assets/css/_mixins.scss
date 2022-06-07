@@ -1,0 +1,47 @@
+@import "./colors";
+
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rad-pad-mar($radius, $padding, $margin) {
+  border-radius: $radius;
+  padding: $padding;
+  margin: $margin;
+}
+
+@mixin font-design($style, $weight, $size, $height, $spacing) {
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin position-absolute($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;       
+          box-shadow: $shadow;
+}
+
+@mixin transition($property, $duration, $style) {
+  -webkit-transition: $property $duration $style;
+      -ms-transition: $property $duration $style;
+          transition: $property $duration $style;
+}
